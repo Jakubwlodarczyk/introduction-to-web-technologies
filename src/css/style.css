@@ -1,7 +1,12 @@
-.green {
-    color: #0f0;
+.body {
+    padding-top: 50px;
 }
 
-.red {
-    color: #f00;
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.jumbotron {
+    margin-top: 40px;
 }
