@@ -1,8 +1,25 @@
-function addName() {
-    var firstName = prompt("Please type your first name");
-    var data = document.getElementById("data");
-    var dataDiv = document.createElement("div");
-    dataDiv.innerHTML = "<div>" + firstName + "</div>";
+$( document ).ready(function () {
+    console.log("Document ready!");
 
-    data.appendChild(dataDiv);
-}
+    $("#nameButton").click(function () {
+        var name = prompt("Please enter a name to add");
+        console.log("Name: " + name);
+        $("#data").append("<div>" + name + "</div>");
+    });
+
+    $("#greenColourButton").click(function () {
+        var dataDiv = $("#data");
+        if (dataDiv.hasClass("red")) {
+            dataDiv.removeClass("red");
+        }
+        dataDiv.addClass("green");
+    });
+
+    $("#redColourButton").click(function () {
+        var dataDiv = $("#data");
+        if (dataDiv.hasClass("green")) {
+            dataDiv.removeClass("green");
+        }
+        dataDiv.addClass("red");
+    });
+});
